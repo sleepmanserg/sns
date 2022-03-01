@@ -1,0 +1,33 @@
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 19px;
+}
+
+.pagination-counter {
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+}
+
+.pagination-prev,
+.pagination-next {
+  color: #c0c2ce;
+  transition: 0.25s;
+  @include hover {
+    text-decoration: none;
+    color: $text-lead;
+  }
+}
+
+.pagination-page {
+  color: $text-lead;
+  font-size: 16px;
+  line-height: 22px;
+  transition: 0.25s;
+  @include hover {
+    text-decoration: none;
+    color: $green;
+  }
+}

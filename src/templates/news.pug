@@ -1,0 +1,100 @@
+extends partials/layout
+
+//- Override default config variables
+append config
+
+	//- ********** Settings **********
+	//- ==============================
+	-var pageTitle = 'Новости'
+	-var whatPage = 'News'
+	//- ==============================
+	//- ********* Settings END *******
+
+//- Page Content
+block content
+	include partials/breadcrumbs
+
+	section.news
+		.container.inner-container
+			.news-header
+				h1.section-title.title-family Новости
+			.news-wrapper
+				.news-filters
+					span.news-filter.active(data-filter="*") Все новости
+					span.news-filter(data-filter=".company-news") Новости компании
+					span.news-filter(data-filter=".industry-news") Новости отрасли
+				.news-items
+					.news-items__card.news-card.show.company-news
+						.news-card__img(style="background-image: url('./img/news/news1.png')")
+						a(href="news-single.html").news-card__body
+							.news-card__date 28.01.22
+							.news-card__tags
+								span #новости компании
+							.news-card__title.title-family.text-uppercase БОЕВОЕ НАСТРОЕНИЕ ОТ TORNADO ENERGY И TOPDOG БОЕВОЕ НАСТРОЕНИЕ ОТ TORNADO ENERGY И TOPDOG БОЕВОЕ НАСТРОЕНИЕ ОТ TORNADO ENERGY И TOPDOG
+							.news-card__description В январе TORNADO ENERGY продолжил успешное сотрудничество с крупнейшей площадкой боев на голых кулаках TOPDOG В январе TORNADO ENERGY продолжил успешное сотрудничество с крупнейшей площадкой боев на голых кулаках TOPDOG В январе TORNADO ENERGY продолжил успешное сотрудничество с крупнейшей площадкой боев на голых кулаках TOPDOG В январе TORNADO ENERGY продолжил успешное сотрудничество с крупнейшей площадкой боев на голых кулаках TOPDOG
+							.news-card__link
+								.arrow-link
+									span Подробнее
+									i.icon-arrow-rotate
+					.news-items__card.news-card.show.industry-news
+						.news-card__img(style="background-image: url('./img/news/news2.png')")
+						a(href="news-single.html").news-card__body
+							.news-card__date 28.01.22
+							.news-card__tags
+								span #новости отрасли
+							.news-card__title.title-family.text-uppercase НОВАЯ ВОЛНА РЕКЛАМНОЙ КАМПАНИИ E-ON ENERGY DRINK В ONLINE
+							.news-card__description В январе TORNADO ENERGY продолжил успешное сотрудничество с крупнейшей площадкой боев на голых кулаках TOPDOG
+							.news-card__link
+								.arrow-link
+									span Подробнее
+									i.icon-arrow-rotate
+					.news-items__card.news-card.show.company-news
+						.news-card__img(style="background-image: url('./img/news/news3.png')")
+						a(href="news-single.html").news-card__body
+							.news-card__date 28.01.22
+							.news-card__tags
+								span #новости компании
+							.news-card__title.title-family.text-uppercase МОЩНОЕ СОТРУДНИЧЕСТВО E-ON BCAA СО СПОРТИВНЫМИ БЛОГЕРАМИ INSTAGRAM
+							.news-card__description В январе TORNADO ENERGY продолжил успешное сотрудничество с крупнейшей площадкой боев на голых кулаках TOPDOG
+							.news-card__link
+								.arrow-link
+									span Подробнее
+									i.icon-arrow-rotate
+					.news-items__card.news-card.show.industry-news
+						.news-card__img(style="background-image: url('./img/news/news4.png')")
+						a(href="news-single.html").news-card__body
+							.news-card__date 28.01.22
+							.news-card__tags
+								span #новости отрасли
+							.news-card__title.title-family.text-uppercase В СНС-ЮЖНО-САХАЛИНСКЕ ЗАВЕРШЕН «РЕБРЕНДИНГ»!
+							.news-card__description В январе TORNADO ENERGY продолжил успешное сотрудничество с крупнейшей площадкой боев на голых кулаках TOPDOG
+							.news-card__link
+								.arrow-link
+									span Подробнее
+									i.icon-arrow-rotate
+					.news-items__card.news-card.show.company-news
+						.news-card__img(style="background-image: url('./img/news/news5.png')")
+						a(href="news-single.html").news-card__body
+							.news-card__date 28.01.22
+							.news-card__tags
+								span #новости компании
+							.news-card__title.title-family.text-uppercase ЯРКОЕ СОТРУДНИЧЕСТВО FRESH BAR С ПОПУЛЯРНЫМИ БЛОГЕРАМИ INSTAGRAM
+							.news-card__description В январе TORNADO ENERGY продолжил успешное сотрудничество с крупнейшей площадкой боев на голых кулаках TOPDOG
+							.news-card__link
+								.arrow-link
+									span Подробнее
+									i.icon-arrow-rotate
+					.news-items__card.news-card.show.industry-news
+						.news-card__img(style="background-image: url('./img/news/news6.png')")
+						a(href="news-single.html").news-card__body
+							.news-card__date 28.01.22
+							.news-card__tags
+								span #новости отрасли
+							.news-card__title.title-family.text-uppercase МОЩНОЕ СОТРУДНИЧЕСТВО E-ON BCAA СО СПОРТИВНЫМИ БЛОГЕРАМИ INSTAGRAM
+							.news-card__description В январе TORNADO ENERGY продолжил успешное сотрудничество с крупнейшей площадкой боев на голых кулаках TOPDOG
+							.news-card__link
+								.arrow-link
+									span Подробнее
+									i.icon-arrow-rotate
+
+			include partials/pagination

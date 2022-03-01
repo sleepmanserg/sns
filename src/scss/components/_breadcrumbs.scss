@@ -1,0 +1,53 @@
+.breadcrumbs {
+  list-style: none;
+  padding: 21px 0 17px;
+  margin-bottom: 0;
+  column-gap: 16px;
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: max-content;
+  overflow-x: auto;
+  overscroll-behavior-inline: contain;
+  padding-bottom: 15px;
+  margin-left: -11px;
+  margin-right: -11px;
+  padding-left: 11px;
+  padding-right: 11px;
+  -ms-scroll-snap-type: inline mandatory;
+  scroll-snap-type: inline mandatory;
+  scroll-padding-inline: 11px;
+  @media (max-width: 1024px) {
+    padding-top: 81px;
+  }
+}
+
+.breadcrumbs-item {
+  position: relative;
+  font-size: 12px;
+  line-height: 16px;
+  &::after {
+    content: "";
+    position: absolute;
+    right: -13px;
+    top: 8px;
+    width: 10px;
+    height: 1px;
+    background-color: $grey-secondary;
+  }
+  &:last-of-type {
+    &::after {
+      display: none;
+    }
+  }
+  a {
+    text-decoration: underline;
+    transition: $transition-color;
+    @include hover {
+      color: $grey;
+    }
+  }
+  a,
+  span {
+    color: $grey-secondary;
+  }
+}

@@ -1,0 +1,97 @@
+@font-face {
+	font-family: Aeroport;
+	font-display: swap;
+	src: url("../fonts/Aeroport.woff2") format("woff2"), url("../fonts/Aeroport.woff") format("woff");
+	font-weight: 400;
+	font-style: normal;
+}
+@font-face {
+	font-family: Aeroport;
+	font-display: swap;
+	src: url("../fonts/Aeroport-Light.woff2") format("woff2"), url("../fonts/Aeroport-Light.woff") format("woff");
+	font-weight: 300;
+	font-style: normal;
+}
+@font-face {
+	font-family: Aeroport;
+	font-display: swap;
+	src: url("../fonts/Aeroport-Medium.woff2") format("woff2"), url("../fonts/Aeroport-Medium.woff") format("woff");
+	font-weight: 500;
+	font-style: normal;
+}
+@font-face {
+	font-family: Aeroport;
+	font-display: swap;
+	src: url("../fonts/Aeroport-Bold.woff2") format("woff2"), url("../fonts/Aeroport-Bold.woff") format("woff");
+	font-weight: 700;
+	font-style: normal;
+}
+@font-face {
+	font-family: SNS;
+	font-display: swap;
+	src: url("../fonts/SNS.woff2") format("woff2");
+	font-weight: normal;
+	font-style: normal;
+}
+
+/* Icon-font */
+
+@font-face {
+  font-family: 'icomoon';
+  src:
+    url('../fonts/icon-font/icomoon.ttf?z1yxk0') format('truetype'),
+    url('../fonts/icon-font/icomoon.woff?z1yxk0') format('woff'),
+    url('../fonts/icon-font/icomoon.svg?z1yxk0#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-phone:before {
+  content: "\e90a";
+}
+.icon-chevron-down:before {
+  content: "\e909";
+}
+.icon-arrow-rotate-slim:before {
+  content: "\e908";
+}
+.icon-play:before {
+  content: "\e905";
+}
+.icon-search:before {
+  content: "\e906";
+}
+.icon-arrow-l:before {
+  content: "\e900";
+}
+.icon-arrow-r:before {
+  content: "\e901";
+}
+.icon-arrow-rotate:before {
+  content: "\e902";
+}
+.icon-facebook:before {
+  content: "\e903";
+}
+.icon-instagram:before {
+  content: "\e904";
+}
+.icon-vk:before {
+  content: "\e907";
+}

@@ -1,0 +1,151 @@
+// Site Header
+header.header
+	.header-topbar
+		.container-fluid
+			.header-topbar__left
+				include mobileToggle
+				.header-topbar__search
+					i.icon-search.text-grey
+					span.text-grey Поиск по сайту
+				.header-topbar__links
+					a(href="#").text-grey Обратная связь
+					a(href="#").text-grey Контакты
+			.header-logo
+				a(href='index.html').logo-link
+					img(src="img/logo.svg", alt="SNS - Group of companies")
+			.header-topbar__right
+				.header-topbar__language
+					a(href="#").text-grey EN
+					a(href="#").text-grey RU
+				.header-topbar__socials
+					a(href="#").text-grey
+						i.icon-facebook
+					a(href="#").text-grey
+						i.icon-vk
+					a(href="#").text-grey
+						i.icon-instagram
+				.header-topbar__phone
+					a(href="tel:88007071992").title-family.text-grey
+						i.icon-phone
+						span 8 800 707 1992
+	.main-header
+		.container-fluid
+			.header-logo
+				a(href='index.html').logo-link
+					img(src="img/logo.svg", alt="SNS - Group of companies")
+				.header-years
+					img(src="img/30-years.svg", alt="30 years")
+			include navigation
+			.header-team
+				a(href="#").btn.btn-green
+					span Хочу в команду
+	.mobile-nav
+		.mobile-nav__header
+			.header-topbar__language
+				a(href="#").text-grey EN
+				a(href="#").text-grey RU
+			.header-topbar__phone
+				a(href="tel:88007071992").title-family.text-grey 8 800 707 1992
+		.mobile-nav__scrollable
+			.mobile-nav__team
+				a(href="#").btn.btn-green.btn-green-solid.w-100 Хочу в команду
+
+			#mobileNavAccordion.accordion.mobile-nav__menu
+				.mobile-nav__accordion
+					#mobileNavHeadingOne.mobile-nav__menu-header
+						button.mobile-nav__menu-btn.btn-block.text-left(type='button' data-toggle='collapse' data-target='#mobileCollapseOne' aria-expanded='false' aria-controls='mobileCollapseOne')
+							a(href="#").mobile-nav__menu-link О компании
+							i.icon-chevron-down
+					#mobileCollapseOne.collapse(aria-labelledby='mobileNavHeadingOne' data-parent='#mobileNavAccordion')
+						.mobile-nav__menu-body
+							ul.mobile-nav__menu-list.mobile-nav__list
+								li.mobile-nav__list-item
+									a(href="#") Менеджмент
+								li.mobile-nav__list-item
+									a(href="#") География
+								li.mobile-nav__list-item
+									a(href="#") История
+								li.mobile-nav__list-item
+									a(href="#") Награды и рейтинги
+								li.mobile-nav__list-item
+									a(href="#") Спонсорство
+								li.mobile-nav__list-item
+									a(href="news.html") Новости
+				.mobile-nav__accordion
+					#mobileNavHeadingTwo.mobile-nav__menu-header
+						button.mobile-nav__menu-btn.btn-block.text-left.collapsed(type='button' data-toggle='collapse' data-target='#mobileCollapseTwo' aria-expanded='false' aria-controls='mobileCollapseTwo')
+							a(href="#").mobile-nav__menu-link Направления бизнеса
+							i.icon-chevron-down
+					#mobileCollapseTwo.collapse(aria-labelledby='mobileNavHeadingTwo' data-parent='#mobileNavAccordion')
+						.mobile-nav__menu-body
+							ul.mobile-nav__menu-list.mobile-nav__list
+								li.mobile-nav__list-item
+									a(href="#") Табачные и никотиносодержашие продукты BAT
+								li.mobile-nav__list-item
+									a(href="#") Энергетические и газированные напитки
+								li.mobile-nav__list-item
+									a(href="#") Сигариллы Marco Polo
+								li.mobile-nav__list-item
+									a(href="#") Зажигалки Delta, Just, Foxlite
+								li.mobile-nav__list-item
+									a(href="#") Золотодобыча SN GOLD mining
+								li.mobile-nav__list-item
+									a(href="#") Логистическая компания BLC
+				.mobile-nav__accordion
+					#mobileNavHeadingThree.mobile-nav__menu-header
+						button.mobile-nav__menu-btn.btn-block.text-left.collapsed(type='button' data-toggle='collapse' data-target='#mobileCollapseThree' aria-expanded='false' aria-controls='mobileCollapseThree')
+							a(href="#").mobile-nav__menu-link Команда и карьера
+							i.icon-chevron-down
+					#mobileCollapseThree.collapse(aria-labelledby='mobileNavHeadingThree' data-parent='#mobileNavAccordion')
+						.mobile-nav__menu-body
+							ul.mobile-nav__menu-list.mobile-nav__list
+								li.mobile-nav__list-item
+									a(href="#") Преимущества работы в компании
+								li.mobile-nav__list-item
+									a(href="#") Истории успеха
+								li.mobile-nav__list-item
+									a(href="#") Вакансии
+								li.mobile-nav__list-item
+									a(href="#") Медиатека
+				.mobile-nav__accordion
+					#mobileNavHeadingFour.mobile-nav__menu-header
+						button.mobile-nav__menu-btn.btn-block.text-left.collapsed(type='button' data-toggle='collapse' data-target='#mobileCollapseFour' aria-expanded='false' aria-controls='mobileCollapseFour')
+							a(href="#").mobile-nav__menu-link Интернет-магазин
+							i.icon-chevron-down
+					#mobileCollapseFour.collapse(aria-labelledby='mobileNavHeadingFour' data-parent='#mobileNavAccordion')
+						.mobile-nav__menu-body
+							ul.mobile-nav__menu-list.mobile-nav__list
+								li.mobile-nav__list-item
+									a(href="#") Устройства нагревания табака GLO
+								li.mobile-nav__list-item
+									a(href="#") Безалкогольные тонизирующие напитки
+								li.mobile-nav__list-item
+									a(href="#") Безалкогольные газированные напитки
+								li.mobile-nav__list-item
+									a(href="#") Зажигалки и аксессуары
+
+			.mobile-nav__links
+				.mobile-nav__links-column
+					.movile-nav__links-title Сотрудничество
+					a(href="mailto:partner@sns.ru").mobile-nav__link partner@sns.ru
+				.mobile-nav__links-column
+					.movile-nav__links-title Отзывы
+					a(href="mailto:feedback@sns.ru").mobile-nav__link feedback@sns.ru
+				.mobile-nav__links-column
+					.movile-nav__links-title Поставщикам
+					a(href="mailto:offer@sns.ru").mobile-nav__link offer@sns.ru
+				.mobile-nav__links-column
+					.movile-nav__links-title Пресс-служба
+					a(href="mailto:pr@sns.ru").mobile-nav__link pr@sns.ru
+
+			.mobile-nav__bottom
+				.header-topbar__socials
+					a(href="#").text-grey
+						i.icon-facebook
+					a(href="#").text-grey
+						i.icon-vk
+					a(href="#").text-grey
+						i.icon-instagram
+				.mobile-nav__bottom-links
+					a(href="#") Обратная связь
+					a(href="#") Контакты

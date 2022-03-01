@@ -1,0 +1,37 @@
+//
+// Variables
+// --------------------------------------------------
+
+//== Colors
+// --------------------------------------------------
+
+$grey: #85898d;
+$grey-lighter: #d6d6d6;
+$grey-light: #e5e5e5;
+$grey-secondary: #b3b4bc;
+$text-lead: #565259;
+$green: #06a478;
+$white: #ffffff;
+
+//== Font Family
+// --------------------------------------------------
+
+$font-family-body: Aeroport;
+$font-family-title: SNS;
+
+//= Transitions
+// -----------------------------------------------------
+
+$transition-color: color 0.5s;
+$transition-bgc: background-color 0.5s;
+$transition-transform: transform 0.5s;
+
+//== Media queries (responsive breakpoints)
+// -------------------------------------------------------
+
+$desktop: "1200px";
+$tablet-land: "1024px";
+$tablet-port: "767px";
+$mobile-land: "479px";
+$mobile-port: "364px";
+$menu-collapse: $tablet-land;

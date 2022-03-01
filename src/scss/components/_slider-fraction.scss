@@ -1,0 +1,29 @@
+.swiper-pagination {
+	position: absolute;
+	height: 24px;
+	top: 23px;
+	left: 0;
+	color: $white;
+	display: flex;
+	justify-content: flex-end;
+	column-gap: 68px;
+	max-width: 373px;
+	padding: 0 20px;
+	span {
+		position: relative;
+		font-size: 16px;
+		line-height: 22px;
+		letter-spacing: -0.02em;
+		&:last-of-type {
+			&::after {
+				content: '';
+				position: absolute;
+				top: 50%;
+				right: 25px;
+				width: 55px;
+				height: 1px;
+				background-color: $white;
+			}
+		}
+	}
+}

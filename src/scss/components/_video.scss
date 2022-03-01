@@ -1,0 +1,89 @@
+.video {
+	position: relative;
+	width: 100%;
+	height: 0;
+	padding-bottom: 56.25%;
+	background-color: #000000;
+	@include hover {
+		.video__button {
+			span {
+				&::after {
+					width: 100%;
+				}
+			}
+		}
+	}
+}
+
+.video__link {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.video__media {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	border: none;
+	object-fit: cover;
+}
+
+.video__button {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	z-index: 1;
+	display: none;
+	padding: 0;
+	width: 192px;
+	height: 40px;
+	border: none;
+	background-color: transparent;
+	transform: translate(-50%, -50%);
+	cursor: pointer;
+	column-gap: 8px;
+}
+
+.video__button span {
+	color: $white;
+	position: relative;
+	&::after {
+		content: '';
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 0;
+		height: 1px;
+		background-color: $white;
+		transition: width .35s;
+	}
+}
+
+
+
+.video__button:focus {
+	outline: none;
+}
+
+
+.video:hover .video__button-shape,
+.video__button:focus .video__button-shape {
+	fill: #ff0000;
+	fill-opacity: 1;
+}
+
+/* Enabled */
+
+.video--enabled {
+	cursor: pointer;
+}
+
+.video--enabled .video__button {
+	display: flex;
+	align-items: center;
+}

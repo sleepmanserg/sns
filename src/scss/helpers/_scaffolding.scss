@@ -1,0 +1,66 @@
+//
+// Scaffolding
+// --------------------------------------------------
+html * {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background-color: $white;
+  font-family: $font-family-body;
+  color: $text-lead;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.container-fluid {
+  padding: 0 40px;
+  @media (max-width: 1200px) {
+    padding: 0 17px;
+  }
+}
+
+.container-inner {
+  max-width: 1240px;
+  padding: 0 20px;
+}
+img {
+  width: 100%;
+}
+
+svg {
+  display: block;
+}
+
+@media (max-width: 1024px) {
+  .site-backdrop {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.15s ease-in;
+    cursor: pointer;
+  }
+
+  .site-backdrop.active {
+    opacity: 0.97;
+    visibility: visible;
+    transition: opacity 0.15s ease-in;
+    background: $text-lead;
+    z-index: 14;
+  }
+}

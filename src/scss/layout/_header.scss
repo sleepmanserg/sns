@@ -1,0 +1,255 @@
+//
+// Header
+// --------------------------------------------------
+
+
+.header-topbar {
+	background-color: rgba(229, 229, 229, 0.2);
+	padding: 11px 0;
+	> .container-fluid {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+	.header-logo {
+		display: none;
+		@media (max-width: 1024px) {
+			display: block;
+		}
+	}
+}
+
+.header-topbar__left,
+.header-topbar__right {
+	display: flex;
+	align-items: center;
+}
+
+.header-topbar__left {
+	column-gap: 56px;
+}
+
+.header-topbar__right {
+	column-gap: 50px;
+}
+
+.header-topbar__search {
+	display: flex;
+	align-items: center;
+	column-gap: 10px;
+	font-size: 12px;
+	line-height: 16px;
+	letter-spacing: -0.04em;
+}
+
+.header-topbar__links {
+	display: flex;
+	column-gap: 30px;
+	a {
+		text-decoration: none;
+		transition: $transition-color;
+		font-size: 12px;
+		line-height: 16px;
+		@include hover {
+			color: $green;
+		}
+	}
+}
+
+.header-topbar__language {
+	display: flex;
+	a {
+		transition: $transition-color;
+		text-decoration: none;
+		font-size: 12px;
+		line-height: 16px;
+		letter-spacing: -0.04em;
+		display: block;
+		padding: 0 8px;
+		position: relative;
+		&::after {
+			content: '';
+			position: absolute;
+			right: 0;
+			top: 50%;
+			transform: translateY(-50%);
+			width: 1px;
+			height: 100%;
+			background-color: $grey;
+		}
+		&:last-of-type {
+			padding-right: 0;
+			&::after {
+				display: none;
+			}
+		}
+		&:first-of-type {
+			padding-left: 0;
+		}
+		@include hover {
+			color: $green;
+			text-decoration: none;
+		}
+	}
+}
+
+.header-topbar__socials {
+	display: flex;
+	align-items: center;
+	column-gap: 20px;
+	a {
+		font-size: 18px;
+		line-height: 18px;
+		text-decoration: none;
+		transition: $transition-color;
+		@include hover {
+			color: $green;
+		}
+	}
+	.icon-vk {
+		font-size: 13px;
+		margin-bottom: 3px;
+		display: block;
+	}
+}
+
+.header-topbar__phone {
+	a {
+		font-size: 16px;
+		line-height: 19px;
+		text-decoration: none;
+		transition: $transition-color;
+		display: inline-flex;
+		align-items: center;
+		i {
+			display: none;
+			font-size: 18px;
+		}
+		@include hover {
+			color: $green;
+		}
+	}
+}
+
+.main-header {
+	position: relative;
+	&::before {
+		content: '';
+		position: absolute;
+		bottom: 0;
+		left: 50%;
+		transform: translateX(-50%);
+		height: 1px;
+		width: 100%;
+		max-width: calc(100% - 80px);
+		background-color: $grey-lighter;
+		pointer-events: none;
+	}
+	> .container-fluid {
+		display: flex;
+		align-items: center;
+		column-gap: 36px;
+	}
+	.header-logo {
+		display: flex;
+		align-items: center;
+		column-gap: 43px;
+		.logo-link {
+			display: block;
+			max-width: 154px;
+		}
+	}
+	.header-years {
+		max-width: 98px;
+	}
+}
+
+.header-team {
+	margin-left:  auto;
+}
+
+@media (max-width: 1400px) {
+	.main-header {
+		> .container-fluid {
+			column-gap: 15px;
+		}
+		.header-years {
+			display: none;
+		}
+	}
+}
+
+@media (max-width: 1200px) {
+	.main-header {
+		&::before {
+			width: 100%;
+			max-width: 100%;
+		}
+		.btn.btn-green {
+			font-size: 14px;
+		}
+		.header-logo {
+			.logo-link {
+				max-width: 136px;
+			}
+		}
+	}
+}
+
+@media (max-width: 1024px) {
+	.header {
+		position: fixed;
+		width: 100%;
+		top: 0;
+		left: 0;
+		z-index: 99;
+		background: rgba(229, 229, 229, 1);
+		&.active {
+			background: rgba(86, 82, 89, 0.97);
+			transition: 0.15s ease-in;
+			pointer-events: none;
+			.header-logo,
+			.header-topbar__right .header-topbar__phone {
+				pointer-events: none;
+			}
+		}
+	}
+	.main-header,
+	.header-topbar .header-topbar__links,
+	.header-topbar .header-topbar__socials,
+	.header-topbar .header-topbar__language {
+		display: none;
+	}
+	.header-topbar {
+		padding: 17px 0 18px;
+	}
+	.header-topbar__left {
+		column-gap: 21px;
+	}
+}
+
+@media (max-width: 768px) {
+	.header-topbar__right {
+		.header-topbar__phone {
+			a {
+				justify-content: flex-end;
+				span {
+					display: none;
+				}
+				i {
+					display: block;
+				}
+			}
+		}
+	}
+	.header-topbar__left {
+		.header-topbar__search {
+			span {
+				display: none;
+			}
+			i {
+				font-size: 18px;
+			}
+		}
+	}
+}

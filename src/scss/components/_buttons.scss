@@ -1,0 +1,81 @@
+.btn {
+	border-radius: 0;
+	outline: none !important;
+	box-shadow: none !important;
+	&.btn-green {
+		border: 1px solid $green;
+		font-size: 16px;
+		line-height: 22px;
+		color: $text-lead;
+		padding: 9px 20px 10px;
+		letter-spacing: -0.02em;
+		transition: $transition-bgc $transition-color ease;
+		@include hover {
+			background-color: $green;
+			color: $white;
+		}
+	}
+	&.btn-green-color {
+		color: $green;
+		text-transform: uppercase;
+	}
+	&.btn-green-solid {
+		background-color: $green;
+		color: $white;
+		font-size: 14px;
+		padding: 14px;
+	}
+}
+
+.arrow-link {
+	font-size: 18px;
+	line-height: 25px;
+	text-transform: uppercase;
+	display: inline-flex;
+	align-items: center;
+	column-gap: 10px;
+	text-decoration: none;
+	span {
+		position: relative;
+		display: block;
+		transition: $transition-color;
+		&::after {
+			content: '';
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			height: 1px;
+			width: 0;
+			transition: .35s;
+		}
+	}
+	@include hover {
+		text-decoration: none;
+		span {
+			&::after {
+				width: 100%;
+			}
+		}
+		i {
+			transform: rotate(45deg);
+		}
+	}
+	i {
+		font-size: 16px;
+		transition: $transition-transform;
+	}
+}
+
+.btn-form {
+	background-color: transparent;
+	border-top: 1px solid #85898D;
+	border-right: 1px solid #85898D;
+	border-bottom: 1px solid #85898D;
+	font-size: 10px;
+	padding-right: 16px;
+	padding-left: 16px;
+	transition: .5s;
+	@include hover {
+		background-color: $green;
+	}
+}

@@ -1,0 +1,107 @@
+extends partials/layout
+
+//- Override default config variables
+append config
+
+	//- ********** Settings **********
+	//- ==============================
+	-var pageTitle = 'Новости - Новость'
+	-var whatPage = 'News Single'
+	//- ==============================
+	//- ********* Settings END *******
+
+//- Page Content
+block content
+	include partials/breadcrumbs
+
+	section.news.news-single
+		.container.inner-container
+			.news-header
+				h1.section-title.title-family Боевое настроение от Tornado Energy и TopDog
+				.news-single__tags.d-flex.align-items-center.flex-wrap
+					.news-card__date 28.01.22
+					.news-card__tags.mb-0
+						span #новости компании
+			.news-single__body
+				.news-single__slider.swiper
+					.swiper-wrapper
+						.swiper-slide
+							.news-single__slider-item(style="background-image: url(./img/news/news-slider.png)")
+						.swiper-slide
+							.news-single__slider-item(style="background-image: url(./img/news/news-slider2.png)")
+						.swiper-slide
+							.news-single__slider-item(style="background-image: url(./img/news/news-slider3.png)")
+						.swiper-slide
+							.news-single__slider-item(style="background-image: url(./img/news/news-slider.png)")
+					.news-single__slider-controls
+						.news-single__slider-prev.news-single__slider-arrow
+							i.icon-arrow-l
+						.news-single__slider-pagination
+						.news-single__slider-next.news-single__slider-arrow
+							i.icon-arrow-r
+
+				.news-single__item
+					p В январе TORNADO ENERGY продолжил успешное сотрудничество с крупнейшей площадкой боев на голых кулаках TOPDOG:
+					p На этот раз бренд интегрирован в 3 выпуска, в каждом из которых на ринге размещены баннеры с логотипом TORNADO ENERGY, а также между боями демонстрируется видеоперебивка – банка TORNADO с лимитированным брендингом TOP DOG.
+
+					h2 Общий охват за месяц составил более 1 000 000 человек!
+
+	section.more-news
+		.container.inner-container
+			h2.more-news__title.title-family Другие новости:
+			.more-news__slider-wrapper
+				.more-news__slider.swiper
+					.swiper-wrapper
+						.swiper-slide
+							.news-card
+								.news-card__img(style="background-image: url('./img/news/news2.png')")
+								a(href="news-single.html").news-card__body
+									.news-card__date 28.01.22
+									.news-card__tags
+										span #новости отрасли
+									.news-card__title.title-family.text-uppercase МОЩНОЕ СОТРУДНИЧЕСТВО E-ON BCAA СО СПОРТИВНЫМИ БЛОГЕРАМИ INSTAGRAM
+									.news-card__link
+										.arrow-link
+											span Подробнее
+											i.icon-arrow-rotate
+						.swiper-slide
+							.news-card
+								.news-card__img(style="background-image: url('./img/news/news1.png')")
+								a(href="news-single.html").news-card__body
+									.news-card__date 28.01.22
+									.news-card__tags
+										span #новости отрасли
+									.news-card__title.title-family.text-uppercase МОЩНОЕ СОТРУДНИЧЕСТВО E-ON BCAA СО СПОРТИВНЫМИ БЛОГЕРАМИ INSTAGRAM
+									.news-card__link
+										.arrow-link
+											span Подробнее
+											i.icon-arrow-rotate
+						.swiper-slide
+							.news-card
+								.news-card__img(style="background-image: url('./img/news/news3.png')")
+								a(href="news-single.html").news-card__body
+									.news-card__date 28.01.22
+									.news-card__tags
+										span #новости отрасли
+									.news-card__title.title-family.text-uppercase МОЩНОЕ СОТРУДНИЧЕСТВО E-ON BCAA СО СПОРТИВНЫМИ БЛОГЕРАМИ INSTAGRAM
+									.news-card__link
+										.arrow-link
+											span Подробнее
+											i.icon-arrow-rotate
+						.swiper-slide
+							.news-card
+								.news-card__img(style="background-image: url('./img/news/news4.png')")
+								a(href="news-single.html").news-card__body
+									.news-card__date 28.01.22
+									.news-card__tags
+										span #новости отрасли
+									.news-card__title.title-family.text-uppercase МОЩНОЕ СОТРУДНИЧЕСТВО E-ON BCAA СО СПОРТИВНЫМИ БЛОГЕРАМИ INSTAGRAM
+									.news-card__link
+										.arrow-link
+											span Подробнее
+											i.icon-arrow-rotate
+				.more-news__slider-prev
+					i.icon-arrow-l
+				.more-news__slider-next
+					i.icon-arrow-r
+

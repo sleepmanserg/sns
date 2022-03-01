@@ -1,0 +1,31 @@
+//- Include config.pug file that holds all variables
+block config
+  include ../helpers/config
+
+//- Mixins - reusable code snippets
+include ../helpers/mixins
+
+
+doctype html
+html(lang="en")
+
+  //- head.pug template
+  include head
+
+  // Body
+  body
+    include mobileMenu
+
+    include header
+
+    main
+      block content
+
+    include footer
+    .site-backdrop
+    // JavaScript (jQuery) libraries, plugins and custom scripts
+    script()&attributes(isNestedFile ? {'src': '../js/vendor.min.js'} : {'src': 'js/vendor.min.js'})
+    //- script(src='../js/lg-fullscreen.min.js')
+    //- script(src='../js/lg-zoom.min.js')
+    //- script(src='../js/lg-thumbnail.min.js')
+    script()&attributes(isNestedFile ? {'src': '../js/scripts.min.js'} : {'src': 'js/scripts.min.js'})
